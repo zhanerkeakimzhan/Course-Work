@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "431413783405",
+    "project_id": "dipl-fabe2",
+    "storage_bucket": "dipl-fabe2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431413783405:android:e9b0b739c05121ca8d4864",
+        "android_client_info": {
+          "package_name": "com.example.dip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431413783405-h9enogmpc0t6vr27ah4nfhei5v776qoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfjkEIdLTfQHOIcjptLmWWKis5YlWDCI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431413783405-h9enogmpc0t6vr27ah4nfhei5v776qoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
