@@ -115,16 +115,52 @@ class _LoginPageState extends State<LoginPage>{
                             fontSize: 18,
                           ),
                         ),
+                      )
+                    )
+                  )
+                ),
+                // sign in button
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.blueAccent,
+                      borderRadius: BorderRadius.circular(12)
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Sign In',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),
+                ),
+                  SizedBox(height: 25,),
+
+                // not remember?
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Not remember?',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
                 ),
                 SizedBox(height: 25,),
 
                 // not remember?
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       'Not remember?',
                       style: TextStyle(
