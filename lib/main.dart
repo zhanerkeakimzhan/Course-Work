@@ -2,9 +2,9 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:dip/MyHomePage.dart';
+import 'package:dip/MyMainPage.dart';
 
-Future main() async{
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
@@ -21,7 +21,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyMainPage(),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => MyHomePage(title: 'Flutter Demo Home Page')
+      //   '/stu': (context) => MyMainPage(),
+      // },
     );
   }
 }
@@ -50,15 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             // ElevatedButton(
-            //     onPressed: () => _some(),
-            //     child: Text('Войти'))
+            //     onPressed: () async {
+            //       Navigator.pushAndRemoveUntil(context, '/stud', (route) => false);
+            //     },
+            //     child: Text('Войти'),
+            //     )
           ],
         ),
       ),
     );
-  }
-
-  _some() {
-    return null;
   }
 }
