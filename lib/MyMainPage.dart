@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 
 class MyMainPage extends StatelessWidget{
   const MyMainPage({super.key});
+  static const mainColor = Color(0xFFA8D0E6);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        toolbarHeight: 80,
+        backgroundColor: mainColor,
+        title: Text('Students'),
       ),
       body: Center(
         child: Column(
