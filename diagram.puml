@@ -1,0 +1,68 @@
+@startuml
+set namespaceSeparator ::
+
+class "dip::home_page.dart::HomePage" {
+  +State<HomePage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "dip::home_page.dart::HomePage"
+
+class "dip::home_page.dart::_HomePageState" {
+  +User user
+  +Widget build()
+}
+
+"dip::home_page.dart::_HomePageState" o-- "firebase_auth::firebase_auth.dart::User"
+"flutter::src::widgets::framework.dart::State" <|-- "dip::home_page.dart::_HomePageState"
+
+class "dip::login_page.dart::LoginPage" {
+  +State<StatefulWidget> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "dip::login_page.dart::LoginPage"
+
+class "dip::login_page.dart::_LoginPageState" {
+  -TextEditingController _emailController
+  -TextEditingController _passwordController
+  {static} +Color mainColor
+  {static} +Color secondColor
+  +Future<dynamic> signIn()
+  +void dispose()
+  +Widget build()
+}
+
+"dip::login_page.dart::_LoginPageState" o-- "flutter::src::widgets::editable_text.dart::TextEditingController"
+"dip::login_page.dart::_LoginPageState" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::State" <|-- "dip::login_page.dart::_LoginPageState"
+
+class "dip::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "dip::main.dart::MyApp"
+
+class "dip::main_page.dart::MainPage" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "dip::main_page.dart::MainPage"
+
+class "dip::my_main_page.dart::MyMainPage" {
+  {static} +Color mainColor
+  {static} +Color secondColor
+  +Widget build()
+}
+
+"dip::my_main_page.dart::MyMainPage" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "dip::my_main_page.dart::MyMainPage"
+
+class "dip::stud.dart::Students" {
+  {static} +Color mainColor
+  +Widget build()
+}
+
+"dip::stud.dart::Students" o-- "dart::ui::Color"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "dip::stud.dart::Students"
+
+
+@enduml

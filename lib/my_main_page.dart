@@ -1,5 +1,7 @@
 import 'package:dip/stud.dart';
 import 'package:flutter/material.dart';
+import 'package:dcdg/dcdg.dart';
+
 
 class MyMainPage extends StatelessWidget{
   const MyMainPage({super.key});
